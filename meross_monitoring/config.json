@@ -1,0 +1,153 @@
+{
+    "user": "",
+    "ssid": "",
+    "password": "",
+    "interface": "en0",
+    "server": "<IP>",
+    "port": 8883,
+    "ca_cert": "/home/homeassistant/.config/meross/ca.crt",
+    "devices": {
+        "tv": {
+            "friendly_name": "tv",
+            "hardware": {
+                "type": "mss310",
+                "subType": "eu",
+                "version": "2.0.0",
+                "chipType": "mt7682",
+                "uuid": "19011871766844251h0334298f1a2f61",
+                "macAddress": "34:29:8f:1a:2f:61"
+            },
+            "firmware": {
+                "version": "2.1.16",
+                "compileTime": "2020/06/10 13:42:43 GMT +08:00",
+                "wifiMac": "34:29:8f:1a:2f:61",
+                "innerIp": "192.168.1.61",
+                "server": "mqtt.meross.com",
+                "port": 443,
+                "userId": 330683
+            },
+            "time": {
+                "timestamp": 1609081224,
+                "timezone": "Europe/Rome",
+                "timeRule": []
+            },
+            "online": {
+                "status": 2
+            }
+        },
+        "kitchen": {
+            "friendly_name": "kitchen",
+            "hardware": {
+                "type": "mss310",
+                "subType": "eu",
+                "version": "2.0.0",
+                "chipType": "mt7682",
+                "uuid": "19011883171755251h0334298f1a2f8a",
+                "macAddress": "34:29:8f:1a:2f:8a"
+            },
+            "firmware": {
+                "version": "2.1.4",
+                "compileTime": "2018/11/20 13:42:43 GMT +08:00",
+                "wifiMac": "34:29:8f:1a:2f:8a",
+                "innerIp": "192.168.1.138",
+                "server": "mqtt.meross.com",
+                "port": 443,
+                "userId": 330683
+            },
+            "time": {
+                "timestamp": 367,
+                "timezone": "Europe/Rome",
+                "timeRule": []
+            },
+            "online": {
+                "status": 2
+            }
+        }, 
+        "moped": {
+            "friendly_name": "moped",
+            "hardware": {
+                "type": "mss310",
+                "subType": "eu",
+                "version": "2.0.0",
+                "chipType": "mt7682",
+                "uuid": "19011829738571251h0334298f1a3c57",
+                "macAddress": "34:29:8f:1a:3c:57"
+            },
+            "firmware": {
+                "version": "2.1.11",
+                "compileTime": "2019/08/30 09:26:24 GMT +08:00",
+                "wifiMac": "34:29:8f:1a:3c:57",
+                "innerIp": "192.168.1.57",
+                "server": "mqtt.meross.com",
+                "port": 443,
+                "userId": 330683
+            },
+            "time": {
+                "timestamp": 199,
+                "timezone": "Europe/Rome",
+                "timeRule": []
+            },
+            "online": {
+                "status": 2
+            }
+        },
+        "alarm": {
+            "friendly_name": "alarm",
+            "hardware": {
+                "type": "mss310",
+                "subType": "eu",
+                "version": "2.0.0",
+                "chipType": "mt7682",
+                "uuid": "19062031292323251h0848e1e9005912",
+                "macAddress": "48:e1:e9:00:59:12"
+            },
+            "firmware": {
+                "version": "2.1.14",
+                "compileTime": "2019/07/31 14:46:31 GMT +08:00",
+                "wifiMac": "48:e1:e9:00:59:12",
+                "innerIp": "192.168.1.12",
+                "server": "",
+                "port": 0,
+                "userId": 330683
+            },
+            "time": {
+                "timestamp": 109,
+                "timezone": "Europe/Rome",
+                "timeRule": []
+            },
+            "online": {
+                "status": 2
+            }
+        },
+        "lamp": {
+            "friendly_name": "lamp",
+            "hardware": {
+                "type": "mss310",
+                "subType": "eu",
+                "version": "2.0.0",
+                "chipType": "mt7682",
+                "uuid": "19011890895204251h0334298f1a2f4f",
+                "macAddress": "34:29:8f:1a:2f:4f"
+            },
+            "firmware": {
+                "version": "2.1.16",
+                "compileTime": "2020/09/28 15:51:07 GMT +08:00",
+                "wifiMac": "14:14:59:05:b7:a1",
+                "innerIp": "192.168.1.4",
+                "server": "mqtt.meross.com",
+                "port": 443,
+                "userId": 330683
+            },
+            "time": {
+                "timestamp": 1609081177,
+                "timezone": "Europe/Rome",
+                "timeRule": []
+            },
+            "online": {
+                "status": 2
+            }
+        }  
+
+
+    }
+}
