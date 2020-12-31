@@ -66,3 +66,18 @@ Instructions:
 
 * VOLTAGE * set to 220
 * SAMPLES between fflush: 30 *
+
+
+
+## saving into db
+
+### efergy logging on Logs/energy.csv
+
+`python3 ./savedb\_energy\_yesterday.py`
+
+executed every night at 01:00 AM
+
+`python3 ./savedb\_energy\_day.py YYYY-mm-dd`
+
+executed on demand to store a specific day readings
+
