@@ -4,9 +4,10 @@ import time
 
 from meross_iot.http_api import MerossHttpClient
 from meross_iot.manager import MerossManager
-from datetime import datetime
+from datetime import datetime, date, time
 
-CHARGINGTH = 5000
+CHARGINGTH = 50
+SLEEPTIME = 300
 THEPLUG = "moped"
 SLEEPTIME = 15 * 60 #in sec
 LOGFILE = "askoll.csv"
@@ -23,19 +24,20 @@ async def ischarging(p):
 	if(activepower >= CHARGINGTH):
 		print(f"Current consumption data: {instant_consumption}")
 		return 1
+	print(f"Current consumption data: {instant_consumption}")
 	print(f"{datetime.now():%Y-%m-%d %H:%M:%S}", activepower)
 	return 0
 
 async def get_day_powerconsumption(p, when):
 	powerinfo = await p.async_get_daily_power_consumption()
-	today = powerinfo['date' == when]
+	today = next(item for item in powerinfo if item["date"] == when)
 	todaypower = today['total_consumption_kwh']
 	return todaypower
 	
 async def turnoff_when_done(p):
 	isw = await ischarging(p)
 	while(isw):
-		await asyncio.sleep(10)
+		await asyncio.sleep(SLEEPTIME)
 		isw = await ischarging(p)
 	try:
 		print("spengo")
@@ -59,7 +61,7 @@ async def main():
 		plug = plugs[0]
 
 		starttime = f"{datetime.now():%Y-%m-%d %H:%M:%S}"
-		today = f"{datetime.now():%Y-%m-%d}"
+		today = datetime.combine(datetime.now().date(), time.min)
 		energystart = await get_day_powerconsumption(plug, today)
 
 		f = open(LOGFILE, "a+")
